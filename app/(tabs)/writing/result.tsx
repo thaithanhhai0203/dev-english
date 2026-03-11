@@ -1,27 +1,18 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
-import ScenarioSelect from "./components/ScenarioSelect";
-import WritingEditor from "./components/WritingEditor";
+import WritingFeedback from "./components/WritingFeedback";
 import { router } from "expo-router";
 
-export default function Writing() {
+export default function Result() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Writing for work</Text>
 
-      <Text style={styles.subtitle}>
-        Viết tin nhắn rõ ràng và chuyên nghiệp
-      </Text>
+      <Text style={styles.subtitle}>Viết tin nhắn rõ ràng và chuyên nghiệp</Text>
 
-      <Text style={styles.label}>Chọn kịch bản</Text>
-      <View style={{ zIndex: 1000 }}>
-        <ScenarioSelect />
-      </View>
+      <WritingFeedback/>
 
-      <Text style={styles.label}>Nội dung trả lời</Text>
-      <WritingEditor />
-
-      <Pressable style={styles.button} onPress={() => router.replace("/(tabs)/writing/result")}>
-        <Text style={styles.buttonText}>Chỉnh sửa</Text>
+      <Pressable style={styles.button} onPress={() => router.replace('/great-work')}>
+        <Text style={styles.buttonText}>Tiếp tục</Text>
       </Pressable>
     </View>
   );

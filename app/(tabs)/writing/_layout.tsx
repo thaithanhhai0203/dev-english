@@ -4,6 +4,7 @@ export default function WritingLayout() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="index" />
+      <Stack.Screen name="result" />
     </Stack>
   );
 }
